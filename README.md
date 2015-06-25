@@ -8,3 +8,4 @@ https://openchain.herokuapp.com/
 
 ## Debug
 	$ npm run-script start-debug
+	$ nodemon --exec "foreman run node --debug app.js"

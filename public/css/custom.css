@@ -1,0 +1,70 @@
+.cover {
+
+}
+
+.oc-nav {
+  margin-right: -25px;
+  margin-left: -25px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: #2980B9
+}
+
+.oc-nav-button {
+  height: 100%;
+}
+
+.oc-nav-button.prev {
+
+}
+
+.oc-nav-button.next {
+
+}
+
+.oc-nav-button.refresh {
+
+}
+
+.list-item-factor {
+  background-color: #3498DB;
+}
+
+.icon-drag {
+  height: 44px;
+  margin-top: 12px;
+  margin-bottom: 4px;
+  box-shadow: 0 0 4px 0 #fff;
+  padding: 4px;
+}
+
+.progress-bullet {
+  font-size: 40px;
+  line-height: 40px;
+  text-shadow: none;
+    color: gray;
+}
+
+.progress-complete {
+  color: white;
+}
+
+.list-group {
+  margin-bottom: 0
+}
+
+.list-item-factor {
+  font-weight: bold;
+}
+
+.list-top {
+  margin-bottom: 6px;
+}
+
+.list-bottom {
+  margin-top: 6px;
+}
+
+#page2, #page3 {
+  display: none
+}
