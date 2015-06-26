@@ -1,3 +1,4 @@
+
 .cover {
 
 }
@@ -69,6 +70,12 @@
   margin-bottom: 0
 }
 
+.list-group-item {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-size: 18px;
+}
+
 .list-item-factor {
   font-weight: bold;
 }
@@ -88,9 +95,32 @@
 .explainer-text {
   display: none;
   font-weight: normal;
+  font-size: 16px;
   text-shadow: none;
 }
 
 .expanded .explainer-text {
   display: block
+}
+
+.footer-text {
+  margin-top: 24px;
+  font-size: 12px;
+  text-shadow: none;
+}
+
+.oc-tweet-btn {
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+#list-unacceptable .main-text {
+  text-shadow: none;
+  font-weight: normal;
+  color: lightblue;
+}
+
+#list-unacceptable .main-text.selected {
+  font-weight: bold;
+  color: white;
 }

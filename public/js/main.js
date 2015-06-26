@@ -88,23 +88,12 @@ nextEl.addEventListener("click", nextPage, false);
 var prevEl = document.getElementById("oc-nav-prev");
 prevEl.addEventListener("click", prevPage, false);
 
-// add event listener to table
-var factorEl = document.getElementById("factor-land");
-factorEl.addEventListener("click", showFactorInfo, false);
-factorEl = document.getElementById("factor-women");
-factorEl.addEventListener("click", showFactorInfo, false);
-factorEl = document.getElementById("factor-farmers");
-factorEl.addEventListener("click", showFactorInfo, false);
-factorEl = document.getElementById("factor-workers");
-factorEl.addEventListener("click", showFactorInfo, false);
-factorEl = document.getElementById("factor-climate");
-factorEl.addEventListener("click", showFactorInfo, false);
-factorEl = document.getElementById("factor-transparency");
-factorEl.addEventListener("click", showFactorInfo, false);
-factorEl = document.getElementById("factor-water");
-factorEl.addEventListener("click", showFactorInfo, false);
 
-var toggleState = {"factor-land": false, "factor-women": false, "factor-farmers": false, "factor-workers": false, "factor-climate": false ,"factor-transparency": false ,"factor-water": false}
+var factors = ["land", "women", "farmers", "workers", "climate", "transparency", "water"]
+for (var i = 0; i < factors.length; i++) {
+	document.getElementById("factor-" + factors[i]).addEventListener("click", showFactorInfo, false)
+	document.getElementById("factor-" + factors[i] + "-unacceptable").addEventListener("click", selectFactor, false)
+};
 
 function showFactorInfo() {
 	var id, el;
@@ -114,7 +103,6 @@ function showFactorInfo() {
 	} else {
 		return;
 	}
-	toggleState[id] = !toggleState[id]
 	if (el.className.indexOf("expanded") === -1) {
 			// remove expanded to collapse all others first
 		var els = document.getElementsByClassName("list-item-factor");
@@ -122,6 +110,16 @@ function showFactorInfo() {
 			els[i].className = "list-group-item list-item-factor"
 		};
 		el.className = el.className + " expanded"
+	} else {
+		el.className = "list-group-item list-item-factor"
+	}
+}
+
+function selectFactor() {
+	el = event.target
+	if (el.className.indexOf("selected") === -1) {
+			// remove expanded to collapse all others first
+		el.className = el.className + " selected"
 	} else {
 		el.className = "list-group-item list-item-factor"
 	}
