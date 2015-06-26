@@ -45,7 +45,7 @@ function nextPage() {
 
 		};
 		document.getElementById("orderedBrands").innerHTML = listHTML;
-		document.getElementById("tweeter").innerHTML = '<a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Just checked best brands that match my sustainability choices on http://openchain.co/'  + hashtagList + ' %23sustainability" data-size="large"><button type="button" class="btn btn-primary btn-lg oc-tweet-btn">Tweet this</button></a>'
+		document.getElementById("tweeter").innerHTML = '<a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Just checked the brands that best match my sustainability values on openchain.co'  + hashtagList + ' %23rehack" data-size="large"><button type="button" class="btn btn-primary btn-lg oc-tweet-btn">Tweet this</button></a>'
 	}
 	// Must be restart
 	if (currentPage === maxPage) {
