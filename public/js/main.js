@@ -1,6 +1,7 @@
 // Simple list
 Sortable.create(simpleList, { 
-	animation: 300
+	animation: 300,
+	handle: ".main-text"
  });
 
 if ('addEventListener' in document) {
@@ -80,11 +81,49 @@ function updateProgress() {
 }
 
 // add event listener to table
-var el = document.getElementById("oc-nav-next");
-el.addEventListener("click", nextPage, false);
+var nextEl = document.getElementById("oc-nav-next");
+nextEl.addEventListener("click", nextPage, false);
 
 // add event listener to table
-var el = document.getElementById("oc-nav-prev");
-el.addEventListener("click", prevPage, false);
+var prevEl = document.getElementById("oc-nav-prev");
+prevEl.addEventListener("click", prevPage, false);
 
+// add event listener to table
+var factorEl = document.getElementById("factor-land");
+factorEl.addEventListener("click", showFactorInfo, false);
+factorEl = document.getElementById("factor-women");
+factorEl.addEventListener("click", showFactorInfo, false);
+factorEl = document.getElementById("factor-farmers");
+factorEl.addEventListener("click", showFactorInfo, false);
+factorEl = document.getElementById("factor-workers");
+factorEl.addEventListener("click", showFactorInfo, false);
+factorEl = document.getElementById("factor-climate");
+factorEl.addEventListener("click", showFactorInfo, false);
+factorEl = document.getElementById("factor-transparency");
+factorEl.addEventListener("click", showFactorInfo, false);
+factorEl = document.getElementById("factor-water");
+factorEl.addEventListener("click", showFactorInfo, false);
+
+var toggleState = {"factor-land": false, "factor-women": false, "factor-farmers": false, "factor-workers": false, "factor-climate": false ,"factor-transparency": false ,"factor-water": false}
+
+function showFactorInfo() {
+	var id, el;
+	if (event.target.className.indexOf("glyphicon") !== -1) {
+		id = event.target.parentElement.id;
+		el = event.target.parentElement;
+	} else {
+		return;
+	}
+	toggleState[id] = !toggleState[id]
+	if (el.className.indexOf("expanded") === -1) {
+			// remove expanded to collapse all others first
+		var els = document.getElementsByClassName("list-item-factor");
+		for (var i = 0; i < els.length; i++) {
+			els[i].className = "list-group-item list-item-factor"
+		};
+		el.className = el.className + " expanded"
+	} else {
+		el.className = "list-group-item list-item-factor"
+	}
+}
 
