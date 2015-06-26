@@ -1,0 +1,43 @@
+html { 
+  background: url(/img/home_splash_large.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.brand {
+	position: absolute;
+	margin-left: 12px;
+	margin-top: 6px;
+	text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
+}
+
+.brand h1 {
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+.brand h2 {
+	margin-top: 4px;
+	font-size: 16px;
+	line-height: 14px;
+}
+.get-started {
+	position: absolute;
+	bottom: 0;
+	margin-bottom: 20px;
+	left: 50%;
+	width: 150px;
+	margin-left: -75px;
+	background-color: #3498DB;
+	color: white;
+	border: none
+}
+
+a {
+	color: white;
+}
+
+a:visited {
+	color: white;
+}
