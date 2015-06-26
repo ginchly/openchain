@@ -8,19 +8,24 @@ html {
 
 .brand {
 	position: absolute;
-	margin-left: 12px;
-	margin-top: 6px;
-	text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
+	left: 50%;
+	width: 250px;
+	margin-left: -125px;
+	margin-top: 175px;
+	text-align: center;
+	/*text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);*/
 }
 
 .brand h1 {
 	margin-bottom: 0px;
 	margin-top: 0px;
+	color: white;
 }
 .brand h2 {
 	margin-top: 4px;
-	font-size: 16px;
-	line-height: 14px;
+		color: white;
+	font-size: 20px;
+	line-height: 22px;
 }
 .get-started {
 	position: absolute;
@@ -29,15 +34,15 @@ html {
 	left: 50%;
 	width: 150px;
 	margin-left: -75px;
-	background-color: #3498DB;
-	color: white;
+	/*background-color: #3498DB;*/
+	color: green;
 	border: none
 }
 
 a {
-	color: white;
+	color: green;
 }
 
 a:visited {
-	color: white;
+	color: green;
 }

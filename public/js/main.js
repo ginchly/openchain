@@ -34,7 +34,7 @@ function nextPage() {
 		// finishing data
 		var listHTML = "";
 
-		for (var i = 0; i < 9; i++) {
+		for (var i = 0; i < 5; i++) {
 			var index = i + 1;
 			if (brandData[i].score > 0) {
 				listHTML = listHTML + "<h5>" + index + ". " + brandData[i].name + " (" + brandData[i].score + ")</h5>";
