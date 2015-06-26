@@ -10,7 +10,10 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Cover Template for Bootstrap</title>
+    <meta property="og:title"              content="OpenChain" />
+    <meta property="og:description"        content="Are your buying choices sustainable?" />
+
+    <title>OpenChain - Are your buying choices sustainable?</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/cover.css" rel="stylesheet">
@@ -85,6 +88,12 @@
             <!-- PAGE 3 -->
             <div id="page3">
                 <h1>Page 3</h1>
+                <div
+                  class="fb-like"
+                  data-share="true"
+                  data-width="450"
+                  data-show-faces="true">
+                </div>
             </div>
             <!-- END PAGE 3 -->
 
@@ -105,6 +114,24 @@
 <script src="js/vendor/sortable.js"></script>
 <script src="js/vendor/fastclick.js"></script>
 <script src="js/main.js"></script>
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1409784506018637',
+      xfbml      : true,
+      version    : 'v2.3'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 
 <!-- Google Analytics -->
 <script>
