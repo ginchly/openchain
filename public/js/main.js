@@ -49,13 +49,7 @@ function nextPage() {
 	}
 	// Must be restart
 	if (currentPage === maxPage) {
-		document.getElementById("oc-nav-next").innerHTML = '<img src="img/icon-next.svg" height=40 />';
-		var currentPageId = "page" + currentPage;
-		var currentPageEl = document.getElementById(currentPageId)
-		currentPageEl.style.display = "none"
-		document.getElementById("page1").style.display = "block"
-		document.getElementById("oc-nav-prev").innerHTML = prevHtmlDisabled;
-		currentPage = 1;
+		window.location.href = "/app.html"
 	} else if (currentPage < maxPage) {
 		var nextPage = currentPage + 1;
 		var currentPageId = "page" + currentPage;
