@@ -36,7 +36,9 @@ function nextPage() {
 
 		for (var i = 0; i < 9; i++) {
 			var index = i + 1;
-			listHTML = listHTML + "<h5>" + index + ". " + brandData[i].name + " (" + brandData[i].score + ")</h5>";
+			if (brandData[i].score > 0) {
+				listHTML = listHTML + "<h5>" + index + ". " + brandData[i].name + " (" + brandData[i].score + ")</h5>";
+		}
 			if (i<3) {
 				hashtagList = hashtagList + " %23" + brandData[i].name.replace(" ", "");
 			}
