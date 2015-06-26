@@ -117,9 +117,12 @@ for (var i = 0; i < factors.length; i++) {
 var unacceptableFactors = [];
 
 var orderedFactors = factors;
-var weighting = [2, 2,2,1,0.0,0.0,0.0]
+var weighting = [1,1,1,1,1,1,1];
+var ordered = false;
 
 function updateOrder() {
+	weighting = [2,2,2,1,0.0,0.0,0.0];
+	ordered = true;
 	orderedFactors = [];
 	var orderedElements = document.getElementsByClassName("list-group-item-orderable")
 	for (var i = 0; i < orderedElements.length; i++) {
