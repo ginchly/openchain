@@ -20,6 +20,7 @@ var prevHtmlDisabled = '<img src="img/icon-prev-disabled.svg" height=40 />'
 
 // Function to change the content of t2
 function nextPage() {
+	ga('send', 'event', 'button', 'click', 'next-page-or-restart');
 	if (currentPage === 1) {
 		document.getElementById("oc-nav-prev").innerHTML = '<img src="img/icon-prev.svg" height=40 />';
 	}
@@ -50,6 +51,7 @@ function nextPage() {
 }
 
 function prevPage() {
+		ga('send', 'event', 'button', 'click', 'prev-page');
 	if (currentPage === maxPage) {
 		document.getElementById("oc-nav-next").innerHTML = nextHtml;
 	}
@@ -96,6 +98,7 @@ for (var i = 0; i < factors.length; i++) {
 };
 
 function showFactorInfo() {
+	ga('send', 'event', 'list-item', 'click', 'factor-info-toggled');
 	var id, el;
 	if (event.target.className.indexOf("glyphicon") !== -1) {
 		id = event.target.parentElement.id;
@@ -116,12 +119,13 @@ function showFactorInfo() {
 }
 
 function selectFactor() {
+	ga('send', 'event', 'list-item', 'click', 'select-toggled');
 	el = event.target
 	if (el.className.indexOf("selected") === -1) {
 			// remove expanded to collapse all others first
 		el.className = el.className + " selected"
 	} else {
-		el.className = "list-group-item list-item-factor"
+		el.className = "main-text"
 	}
 }
 
